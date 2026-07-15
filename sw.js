@@ -15,7 +15,7 @@
  *   harus selalu yang terbaru.
  */
 
-const CACHE_NAME = 'ta-shell-v1';
+const CACHE_NAME = 'ta-shell-v2';
 const APP_SHELL = [
   './index.html',
   './manifest.json',

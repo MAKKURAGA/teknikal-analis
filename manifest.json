@@ -1,6 +1,6 @@
 {
-  "name": "Teknikal Analis 1 — Makkuraga Grup",
-  "short_name": "Teknikal Analis",
+  "name": "Makkuraga Inspect — Teknikal Analis",
+  "short_name": "Mkg Inspect",
   "description": "Form inspeksi Teknikal Analisis Makkuraga Grup — bisa dipakai offline, otomatis kirim saat online.",
   "start_url": "./index.html",
   "scope": "./",
@@ -22,13 +22,13 @@
       "purpose": "any"
     },
     {
-      "src": "./icon-192.png",
+      "src": "./icon-192-maskable.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "./icon-512.png",
+      "src": "./icon-512-maskable.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"

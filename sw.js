@@ -8,15 +8,22 @@
  * rapuh dan sulit didebug daripada retry langsung di halaman.
  *
  * Strategi cache:
- * - App shell (HTML, manifest, icon) -> cache-first, supaya tetap kebuka
- *   walau offline, dan tetap cepat walau online.
+ * - Halaman (index.html / navigasi) -> NETWORK-FIRST: kalau online selalu
+ *   ambil versi terbaru (dan simpan ke cache), kalau offline baru pakai
+ *   salinan cache. Ini supaya perubahan daftar komponen di form langsung
+ *   kepakai di HP semua orang tanpa harus hapus cache manual.
+ * - Aset lain (manifest, icon) -> cache-first, supaya cepat.
  * - Request ke luar (Google Apps Script, Google Sheets, gstatic, dsb)
  *   -> selalu lewat network langsung, TIDAK di-cache, karena data itu
  *   harus selalu yang terbaru.
+ *
+ * Setiap kali struktur form berubah, naikkan CACHE_NAME (v3 -> v4, dst)
+ * supaya cache lama dibuang saat service worker baru aktif.
  */
 
-const CACHE_NAME = 'ta-shell-v2';
+const CACHE_NAME = 'ta-shell-v3';
 const APP_SHELL = [
+  './',
   './index.html',
   './manifest.json',
   './icon-192.png',
@@ -45,28 +52,53 @@ self.addEventListener('activate', (event) => {
   );
 });
 
+function isPage(request) {
+  if (request.mode === 'navigate') return true;
+  const accept = request.headers.get('accept') || '';
+  return accept.indexOf('text/html') !== -1;
+}
+
 self.addEventListener('fetch', (event) => {
-  const url = new URL(event.request.url);
+  const request = event.request;
+  const url = new URL(request.url);
 
   // Hanya urus request ke domain sendiri (app shell). Request ke domain lain
   // (script.google.com, fonts.googleapis.com, dst) dibiarkan lewat network
   // apa adanya — jangan diintersep, biar tidak mengganggu submit data.
   if (url.origin !== self.location.origin) return;
 
-  if (event.request.method !== 'GET') return;
+  if (request.method !== 'GET') return;
 
-  event.respondWith(
-    caches.match(event.request).then((cached) => {
-      if (cached) return cached;
-      return fetch(event.request)
+  // Halaman: network-first, fallback ke cache saat offline.
+  if (isPage(request)) {
+    event.respondWith(
+      fetch(request)
         .then((response) => {
-          // Simpan salinan terbaru ke cache supaya update ikut kepakai
-          // lain kali (tanpa menunggu deploy ulang service worker).
-          const copy = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
+          if (response && response.ok) {
+            const copy = response.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+          }
           return response;
         })
-        .catch(() => cached); // offline & belum ke-cache -> tidak ada fallback lain
+        .catch(() =>
+          caches.match(request)
+            .then((cached) => cached || caches.match('./index.html'))
+        )
+    );
+    return;
+  }
+
+  // Aset statis: cache-first.
+  event.respondWith(
+    caches.match(request).then((cached) => {
+      if (cached) return cached;
+      return fetch(request).then((response) => {
+        if (response && response.ok) {
+          const copy = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+        }
+        return response;
+      });
     })
   );
 });

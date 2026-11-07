@@ -230,6 +230,129 @@
     .btn-row{grid-template-columns:1fr 1fr;}
   }
 
+
+  /* ---------- Beranda (halaman awal) ---------- */
+  header.top.compact .gauge-wrap,
+  header.top.compact nav.jump,
+  header.top.compact .warn-count{display:none;}
+  #pageBeranda{padding-top:20px;}
+  .b-greet{font-family:'Barlow Condensed';font-weight:800;font-size:30px;line-height:1.05;text-transform:uppercase;letter-spacing:.01em;margin:0;}
+  .b-greet span{color:var(--accent);}
+  .b-date{font-family:'JetBrains Mono';font-size:11.5px;color:var(--muted);letter-spacing:.03em;margin:6px 0 14px;}
+  .b-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
+  .b-chip{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.04em;padding:6px 11px;border-radius:20px;border:1px solid var(--border);background:var(--card);color:var(--muted);text-transform:uppercase;}
+  .b-chip.accent{border-color:var(--accent);color:var(--accent);}
+  .b-cta{
+    width:100%;display:flex;align-items:center;gap:14px;text-align:left;cursor:pointer;
+    background:var(--accent);color:#0A0D10;border:none;border-radius:16px;padding:18px 18px;margin-bottom:14px;
+  }
+  .b-cta:active{opacity:.88;}
+  .b-cta svg{width:34px;height:34px;flex-shrink:0;}
+  .b-cta .t{font-family:'Barlow Condensed';font-weight:800;font-size:23px;text-transform:uppercase;letter-spacing:.02em;line-height:1;}
+  .b-cta .s{font-family:'Inter';font-size:12px;font-weight:500;opacity:.8;margin-top:4px;}
+  .b-cta .arrow{margin-left:auto;font-size:26px;line-height:1;}
+  .b-draft{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--bad);border-radius:14px;padding:14px 16px;margin-bottom:14px;}
+  .b-draft .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;}
+  .b-draft .lbl{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.06em;color:var(--bad);text-transform:uppercase;}
+  .b-draft .eq{font-family:'Barlow Condensed';font-weight:800;font-size:22px;text-transform:uppercase;margin-top:2px;}
+  .b-draft .cnt{font-family:'JetBrains Mono';font-size:12px;color:var(--muted);}
+  .b-bar{height:6px;border-radius:6px;background:var(--card-2);overflow:hidden;margin-top:10px;}
+  .b-bar > i{display:block;height:100%;width:0;background:var(--accent);border-radius:6px;transition:width .25s;}
+  .b-draft .warn{font-family:'JetBrains Mono';font-size:11px;color:var(--bad);margin-top:8px;display:none;}
+  .b-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:22px;}
+  .b-stat{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 10px;text-align:center;}
+  .b-stat b{display:block;font-family:'Barlow Condensed';font-weight:800;font-size:30px;line-height:1;}
+  .b-stat span{display:block;font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.05em;color:var(--muted);text-transform:uppercase;margin-top:6px;}
+  .b-stat.good b{color:var(--good);} .b-stat.bad b{color:var(--bad);} .b-stat.sync b{color:var(--accent);}
+  .b-hist{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:11px 14px;margin-bottom:8px;display:flex;align-items:center;gap:12px;}
+  .b-hist{cursor:pointer;} .b-hist:active{background:var(--card-2);}
+  .b-hist .chev{color:var(--muted);font-size:20px;line-height:1;}
+  .b-hist .eq{font-family:'JetBrains Mono';font-weight:600;font-size:13.5px;}
+  .b-hist .meta{font-size:11.5px;color:var(--muted);margin-top:2px;}
+  .b-hist .tag{margin-left:auto;font-family:'JetBrains Mono';font-size:10.5px;padding:4px 9px;border-radius:12px;white-space:nowrap;}
+  .b-hist .tag.ok{background:var(--good-bg);color:var(--good);}
+  .b-hist .tag.bad{background:var(--bad-bg);color:var(--bad);}
+  .b-empty{font-size:12.5px;color:var(--muted);text-align:center;padding:18px 10px;border:1px dashed var(--border);border-radius:12px;margin-bottom:8px;}
+  #pageBeranda .settings-row{margin-top:14px;margin-bottom:0;}
+
+
+  /* ---------- Dashboard ---------- */
+  #pageDashboard{max-width:1100px;padding-top:20px;}
+  #pageDashboard h2{font-size:26px;margin:0 0 2px;}
+  .d-sub{font-size:12.5px;color:var(--muted);margin:0 0 16px;}
+  .d-filter{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:14px;}
+  .d-filter-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .d-filter .field.full{grid-column:1/-1;}
+  .d-filter select{
+    background:var(--card-2);border:1px solid var(--border);border-radius:8px;color:var(--text);
+    padding:10px 12px;font-size:14px;font-family:'Inter';width:100%;
+  }
+  .d-quick{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0 0;}
+  .d-quick button{
+    font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.03em;padding:6px 11px;border-radius:20px;
+    border:1px solid var(--border);background:var(--card-2);color:var(--muted);cursor:pointer;text-transform:uppercase;
+  }
+  .d-quick button.active{border-color:var(--accent);color:var(--accent);}
+  .d-apply{
+    width:100%;margin-top:12px;padding:12px;border-radius:10px;border:none;background:var(--accent);color:#0A0D10;
+    font-family:'Barlow Condensed';font-weight:800;font-size:16px;letter-spacing:.03em;text-transform:uppercase;cursor:pointer;
+  }
+  .d-apply:disabled{opacity:.6;cursor:wait;}
+  .d-summary{font-family:'JetBrains Mono';font-size:11.5px;color:var(--muted);margin:0 0 8px;display:flex;flex-wrap:wrap;gap:6px 14px;}
+  .d-summary b{color:var(--text);}
+  .d-source{font-family:'JetBrains Mono';font-size:10.5px;color:var(--bad);margin:0 0 10px;display:none;}
+  .d-table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:12px;background:var(--card);margin-bottom:20px;}
+  table.d-table{border-collapse:collapse;width:100%;min-width:980px;font-size:13px;}
+  .d-table th{
+    position:sticky;top:0;background:var(--card-2);text-align:left;padding:10px 12px;white-space:nowrap;
+    font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);
+    border-bottom:1px solid var(--border);
+  }
+  .d-table td{padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top;}
+  .d-table tr:last-child td{border-bottom:none;}
+  .d-table td.mono{font-family:'JetBrains Mono';font-weight:600;white-space:nowrap;}
+  .d-table td.num{text-align:center;font-family:'Barlow Condensed';font-weight:800;font-size:18px;}
+  .d-table td.num.bad{color:var(--bad);} .d-table td.num.ok{color:var(--good);}
+  .d-table td.komp{min-width:220px;} .d-table td.komp div{padding:1px 0;}
+  .d-table td.komp small{color:var(--bad);font-family:'JetBrains Mono';font-size:10.5px;}
+  .d-table td.cat{min-width:200px;white-space:pre-wrap;color:var(--muted);}
+  .d-empty{padding:28px 12px;text-align:center;color:var(--muted);font-size:13px;}
+
+  .d-tabs{display:flex;gap:6px;margin-bottom:14px;border-bottom:1px solid var(--border);}
+  .d-tabs button{
+    flex:1;padding:11px 6px;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;
+    font-family:'Barlow Condensed';font-weight:800;font-size:16px;letter-spacing:.03em;text-transform:uppercase;
+    color:var(--muted);cursor:pointer;
+  }
+  .d-tabs button.active{color:var(--accent);border-bottom-color:var(--accent);}
+  .d-note{font-size:12px;color:var(--muted);line-height:1.5;margin:0 0 12px;}
+  .d-note b{color:var(--text);}
+  .d-ctl{display:flex;gap:8px;align-items:center;margin:0 0 12px;flex-wrap:wrap;}
+  .d-ctl label{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.05em;color:var(--muted);text-transform:uppercase;}
+  .d-ctl select{background:var(--card-2);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:8px 10px;font-size:13px;font-family:'Inter';}
+  .pa-block{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:12px;}
+  .pa-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:8px;}
+  .pa-head b{font-family:'Barlow Condensed';font-weight:800;font-size:18px;text-transform:uppercase;}
+  .pa-head span{font-family:'JetBrains Mono';font-size:10.5px;color:var(--muted);}
+  .pa-row{padding:7px 0;border-top:1px solid var(--border);}
+  .pa-row:first-of-type{border-top:none;}
+  .pa-line{display:flex;justify-content:space-between;gap:10px;font-size:13px;}
+  .pa-line .nm{font-weight:500;}
+  .pa-line .ct{font-family:'JetBrains Mono';font-size:12px;white-space:nowrap;}
+  .pa-line .ct em{color:var(--muted);font-style:normal;}
+  .pa-bar{height:7px;border-radius:6px;background:var(--card-2);margin-top:6px;overflow:hidden;}
+  .pa-bar i{display:block;height:100%;background:var(--bad);border-radius:6px;}
+  .pa-meta{font-family:'JetBrains Mono';font-size:10.5px;color:var(--muted);margin-top:4px;}
+  .pa-more{font-family:'JetBrains Mono';font-size:11px;color:var(--muted);padding-top:8px;border-top:1px solid var(--border);}
+  .tag-low{font-family:'JetBrains Mono';font-size:10px;color:var(--bad);border:1px solid var(--bad);border-radius:10px;padding:1px 7px;margin-left:6px;white-space:nowrap;}
+  .d-table td.right{text-align:right;font-family:'JetBrains Mono';white-space:nowrap;}
+  .pm-tag{font-family:'JetBrains Mono';font-size:10px;border-radius:10px;padding:1px 7px;margin-left:6px;white-space:nowrap;border:1px solid;}
+  .pm-tag.new{color:var(--bad);border-color:var(--bad);}
+  .pm-tag.cont{color:#F5A524;border-color:#F5A524;}
+  .pm-ok{font-size:12px;color:var(--good);margin-top:8px;}
+  .pm-sel{background:var(--card-2);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:9px 10px;font-size:14px;font-family:'Inter';width:100%;max-width:340px;}
+  .pm-step{background:var(--card-2);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:8px 10px;font-size:14px;font-family:'JetBrains Mono';width:110px;}
+  .pa-meta.units{white-space:normal;line-height:1.5;}
   /* ---------- Bulk actions ---------- */
   .bulk-row{display:flex;gap:8px;margin:-8px 0 18px;}
   .bulk-btn{
@@ -302,6 +425,17 @@
     width:100%;padding:15px 16px;border-radius:12px;border:1.5px solid var(--border);
     background:var(--card);color:var(--text);font-size:15px;font-family:'Inter',sans-serif;
   }
+  .login-field.has-eye input{padding-right:48px;}
+  .login-eye{
+    position:absolute;right:6px;top:50%;transform:translateY(-50%);width:38px;height:38px;
+    display:flex;align-items:center;justify-content:center;background:none;border:none;
+    color:var(--muted);cursor:pointer;border-radius:8px;
+  }
+  .login-eye:active{background:var(--card-2);}
+  .login-eye svg{width:20px;height:20px;}
+  .login-eye .eye-off{display:none;}
+  .login-eye.showing .eye-on{display:none;}
+  .login-eye.showing .eye-off{display:block;}
   .login-field input:focus{outline:none;border-color:var(--accent);}
   .login-error{
     display:none;align-items:center;gap:8px;color:var(--danger);
@@ -358,8 +492,12 @@
       <input type="text" id="loginUsername" list="usernameHistory" placeholder="Username" autocomplete="off" autocorrect="off" spellcheck="false">
       <datalist id="usernameHistory"></datalist>
     </div>
-    <div class="login-field">
-      <input type="password" id="loginPassword" list="passwordHistory" placeholder="Sandi" autocomplete="off">
+    <div class="login-field has-eye">
+      <input type="password" id="loginPassword" placeholder="Sandi" autocomplete="off">
+      <button type="button" class="login-eye" id="btnTogglePw" aria-label="Lihat atau sembunyikan sandi">
+        <svg class="eye-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+        <svg class="eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"></path><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"></path><path d="M14.12 14.12a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>
+      </button>
       <datalist id="passwordHistory"></datalist>
     </div>
     <div class="login-error" id="loginError">⚠ Username atau sandi salah</div>
@@ -397,7 +535,7 @@
 <header class="top">
   <div class="top-row">
     <div class="brand">
-      <img class="brand-logo" src="./icon-192.png" alt="Makkuraga Grup">
+      <img class="brand-logo" src="./icon-192.png" alt="Makkuraga Grup" onerror="this.onerror=null;this.src=document.querySelector('#loginOverlay .login-brand img').src;">
       <div class="brand-text">
         <span class="eyebrow">Makkuraga Grup</span>
         <h1 id="brandTitle">Teknikal Analis 1</h1>
@@ -413,7 +551,114 @@
   <nav class="jump" id="jumpNav"></nav>
 </header>
 
-<main id="pageHome" class="active">
+<main id="pageBeranda" class="active">
+  <h2 class="b-greet" id="bGreet">Halo</h2>
+  <div class="b-date" id="bDate"></div>
+  <div class="b-chips">
+    <span class="b-chip accent" id="bJenis">—</span>
+    <span class="b-chip" id="bLokasi">—</span>
+  </div>
+
+  <button type="button" class="b-cta" id="btnStartInspect">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+    <div>
+      <div class="t" id="bCtaTitle">Mulai Inspeksi Baru</div>
+      <div class="s" id="bCtaSub">Isi checklist teknikal analisis unit</div>
+    </div>
+    <span class="arrow">›</span>
+  </button>
+
+  <div class="b-draft" id="bDraft" style="display:none;">
+    <div class="row"><span class="lbl">Draft belum selesai</span><span class="cnt" id="bDraftCnt">0/0</span></div>
+    <div class="eq" id="bDraftEq">—</div>
+    <div class="b-bar"><i id="bDraftBar"></i></div>
+    <div class="warn" id="bDraftWarn"></div>
+  </div>
+
+  <div class="b-stats">
+    <div class="b-stat good"><b id="bStatSent">0</b><span>Terkirim hari ini</span></div>
+    <div class="b-stat bad"><b id="bStatRusak">0</b><span>Komponen rusak</span></div>
+    <div class="b-stat sync"><b id="bStatQueue">0</b><span>Antrian sinkron</span></div>
+  </div>
+
+  <p class="settings-group-label">Riwayat Hari Ini (perangkat ini)</p>
+  <div id="bHistory"></div>
+</main>
+
+<main id="pageDashboard">
+  <h2>Dashboard</h2>
+  <p class="d-sub" id="dSub">Rekap hasil inspeksi berdasarkan rentang tanggal</p>
+
+  <div class="d-filter">
+    <div class="d-filter-grid">
+      <div class="field"><label>Dari Tanggal</label><input type="date" id="dFrom"></div>
+      <div class="field"><label>Sampai Tanggal</label><input type="date" id="dTo"></div>
+      <div class="field"><label>Lokasi Site</label>
+        <select id="dSite"><option value="">Semua site</option></select>
+      </div>
+      <div class="field"><label>Type Unit</label>
+        <select id="dType"><option value="">Semua type</option></select>
+      </div>
+    </div>
+    <div class="d-quick" id="dQuick">
+      <button type="button" data-days="1">Hari ini</button>
+      <button type="button" data-days="7" class="active">7 hari</button>
+      <button type="button" data-days="30">30 hari</button>
+      <button type="button" data-days="90">90 hari</button>
+    </div>
+    <button type="button" class="d-apply" id="btnDashApply">Tampilkan</button>
+  </div>
+
+  <div class="d-tabs" id="dTabs">
+    <button type="button" data-tab="rekap" class="active">Rekap</button>
+    <button type="button" data-tab="pareto">Pareto</button>
+    <button type="button" data-tab="umur">Analisis PM</button>
+  </div>
+  <div class="d-source" id="dSource"></div>
+
+  <div id="dTabRekap">
+  <div class="d-summary" id="dSummary"></div>
+  <div class="d-table-wrap">
+    <table class="d-table">
+      <thead><tr>
+        <th>Lokasi Site</th><th>Tanggal</th><th>Equipment ID</th><th>Type Unit</th>
+        <th id="dThHM">HM</th><th style="text-align:center">Jumlah Temuan</th><th>Komponen Rusak</th><th>Catatan Umum</th>
+      </tr></thead>
+      <tbody id="dBody"></tbody>
+    </table>
+  </div>
+  </div>
+
+  <div id="dTabPareto" style="display:none;">
+    <p class="d-note"><b>Pareto kerusakan</b> — komponen yang paling sering ditemukan RUSAK pada rentang tanggal &amp; filter di atas. Angka "×" = berapa kali temuan, "unit" = berapa unit berbeda yang terkena. Kalau satu unit dilaporkan rusak berulang kali sebelum diperbaiki, temuannya ikut terhitung berulang.</p>
+    <div class="d-ctl">
+      <label for="dGroupBy">Kelompokkan</label>
+      <select id="dGroupBy">
+        <option value="total">Total (semua)</option>
+        <option value="type">Per Type Unit</option>
+        <option value="site">Per Lokasi Site</option>
+      </select>
+    </div>
+    <div id="dParetoOut"></div>
+  </div>
+
+  <div id="dTabUmur" style="display:none;">
+    <p class="d-note" id="pmNote"></p>
+    <div class="d-ctl">
+      <label for="pmStep">Interval PM</label>
+      <input type="number" class="pm-step" id="pmStep" min="1" step="1" inputmode="numeric">
+      <span class="d-note" style="margin:0" id="pmUnitLbl">KM</span>
+    </div>
+    <div class="d-quick" id="pmView" style="margin:0 0 14px;">
+      <button type="button" data-view="unit" class="active">Per Unit</button>
+      <button type="button" data-view="band">Per Rentang PM</button>
+      <button type="button" data-view="komp">Per Komponen</button>
+    </div>
+    <div id="pmOut"></div>
+  </div>
+</main>
+
+<main id="pageHome">
   <div class="meta-card">
     <div class="meta-grid">
       <div class="field">
@@ -487,9 +732,13 @@
 </div>
 
 <nav class="bottom-nav" id="bottomNav" style="display:none;">
-  <button type="button" class="bottom-nav-item active" id="navHome" data-page="pageHome">
+  <button type="button" class="bottom-nav-item active" id="navBeranda" data-page="pageBeranda">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><path d="M9 22V12h6v10"></path></svg>
     Beranda
+  </button>
+  <button type="button" class="bottom-nav-item" id="navDashboard" data-page="pageDashboard">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+    Dashboard
   </button>
   <button type="button" class="bottom-nav-item" id="navSettings" data-page="pageSettings">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
@@ -497,6 +746,19 @@
   </button>
 </nav>
 
+
+<div class="confirm-overlay" id="detailOverlay">
+  <div class="confirm-sheet">
+    <h3 class="confirm-title" id="dtTitle">Detail Inspeksi</h3>
+    <p class="confirm-sub" id="dtSub"></p>
+    <div class="confirm-rows" id="dtRows"></div>
+    <div class="confirm-issues" id="dtIssueHead" style="display:none;"></div>
+    <div class="confirm-rows" id="dtIssues" style="display:none;"></div>
+    <div class="confirm-actions">
+      <button class="confirm-edit" id="btnDetailClose">Tutup</button>
+    </div>
+  </div>
+</div>
 
 <div class="confirm-overlay" id="confirmOverlay">
   <div class="confirm-sheet">
@@ -595,7 +857,31 @@ function attemptLogin() {
 
 document.addEventListener('DOMContentLoaded', () => {
   populateLoginDatalists();
-  document.getElementById('loginUsername').focus();
+  // Isi otomatis dengan login terakhir yang berhasil (username + sandi tersimpan di perangkat ini)
+  const last = loadLoginHistory()[0];
+  if (last) {
+    document.getElementById('loginUsername').value = last.username;
+    document.getElementById('loginPassword').value = last.password;
+    document.getElementById('btnSignIn').focus();
+  } else {
+    document.getElementById('loginUsername').focus();
+  }
+});
+
+// Ganti/pilih username lain dari daftar → sandi ikut terisi otomatis
+['input', 'change'].forEach(evt => {
+  document.getElementById('loginUsername').addEventListener(evt, (e) => {
+    const match = loadLoginHistory().find(h => h.username === e.target.value.trim());
+    if (match) document.getElementById('loginPassword').value = match.password;
+  });
+});
+
+document.getElementById('btnTogglePw').addEventListener('click', () => {
+  const pw = document.getElementById('loginPassword');
+  const btn = document.getElementById('btnTogglePw');
+  const show = pw.type === 'password';
+  pw.type = show ? 'text' : 'password';
+  btn.classList.toggle('showing', show);
 });
 
 document.getElementById('btnSignIn').addEventListener('click', attemptLogin);
@@ -644,18 +930,701 @@ document.getElementById('btnModeConfirm').addEventListener('click', () => {
   saveMode(mode);
   document.getElementById('modeSelectOverlay').style.display = 'none';
   applyMode(mode);
+  const fl = document.getElementById('fLokasi'); fl.value = lokasi; fl.dataset.confirmed = lokasi;
+  saveDraft(); refreshUI();
+});
+
+// ---------- Beranda ----------
+const SENT_LOG_KEY = 'mkgSentLog_v1';
+let pendingQueueCount = 0;
+
+function loadSentLog() {
+  // Riwayat hanya berlaku untuk HARI INI — hari berikutnya otomatis dibersihkan.
+  let log = [];
+  try { log = JSON.parse(localStorage.getItem(SENT_LOG_KEY)) || []; } catch (e) { return []; }
+  const today = log.filter(e => sameLocalDay(e.t));
+  if (today.length !== log.length) {
+    try { localStorage.setItem(SENT_LOG_KEY, JSON.stringify(today)); } catch (e) {}
+  }
+  return today;
+}
+const ARCHIVE_KEY = 'mkgSentArchive_v1';
+function loadArchive() {
+  try { return JSON.parse(localStorage.getItem(ARCHIVE_KEY)) || []; } catch (e) { return []; }
+}
+function archiveSent(entry) {
+  // Arsip lokal (tidak ikut dihapus harian) — cadangan Dashboard kalau server belum menyediakan data.
+  const cutoff = Date.now() - 120 * 86400000;
+  let arc = loadArchive().filter(e => e.t >= cutoff);
+  arc.unshift(entry);
+  if (arc.length > 1000) arc = arc.slice(0, 1000);
+  try { localStorage.setItem(ARCHIVE_KEY, JSON.stringify(arc)); } catch (e) {}
+}
+function logSent(entry) {
+  archiveSent(entry);
+  let log = loadSentLog();
+  log.unshift(entry);
+  if (log.length > 30) log = log.slice(0, 30);
+  try { localStorage.setItem(SENT_LOG_KEY, JSON.stringify(log)); } catch (e) {}
+}
+function sameLocalDay(ts) {
+  const a = new Date(ts), b = new Date();
+  return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
+}
+
+function renderBeranda() {
+  const hr = new Date().getHours();
+  const sapa = hr < 11 ? 'Selamat pagi' : hr < 15 ? 'Selamat siang' : hr < 18 ? 'Selamat sore' : 'Selamat malam';
+  const nama = (currentUsername || document.getElementById('fNama').value || '').trim();
+  const g = document.getElementById('bGreet');
+  g.textContent = sapa + (nama ? ', ' : '');
+  if (nama) { const sp = document.createElement('span'); sp.textContent = nama; g.appendChild(sp); }
+  document.getElementById('bDate').textContent =
+    new Date().toLocaleDateString('id-ID', { weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' });
+
+  const mode = loadSavedMode() || {};
+  document.getElementById('bJenis').textContent = mode.jenis === 'DT' ? 'Dump Truck' : mode.jenis === 'HE' ? 'Heavy Equipment' : '—';
+  document.getElementById('bLokasi').textContent = mode.lokasi || '—';
+
+  // Draft / progres form saat ini
+  let filled = 0, rusak = 0;
+  if (typeof state !== 'undefined') {
+    Object.values(state).forEach(st => { if (st.status) filled++; if (st.status === 'RUSAK') rusak++; });
+  }
+  const total = (typeof totalItems !== 'undefined') ? totalItems : 0;
+  const equip = document.getElementById('fEquip').value.trim();
+  const hasDraft = filled > 0 || equip !== '';
+  const draftEl = document.getElementById('bDraft');
+  draftEl.style.display = hasDraft ? 'block' : 'none';
+  if (hasDraft) {
+    document.getElementById('bDraftEq').textContent = equip || 'Unit belum diisi';
+    document.getElementById('bDraftCnt').textContent = filled + '/' + total + ' terisi';
+    document.getElementById('bDraftBar').style.width = (total ? Math.round(filled / total * 100) : 0) + '%';
+    const w = document.getElementById('bDraftWarn');
+    w.style.display = rusak > 0 ? 'block' : 'none';
+    w.textContent = rusak + ' komponen ditandai RUSAK';
+  }
+  document.getElementById('bCtaTitle').textContent = hasDraft ? 'Lanjutkan Inspeksi' : 'Mulai Inspeksi Baru';
+  document.getElementById('bCtaSub').textContent = hasDraft ? 'Lanjut isi draft yang tersimpan di perangkat ini' : 'Isi checklist teknikal analisis unit';
+
+  // Statistik & riwayat dari log kirim lokal
+  const log = loadSentLog();
+  const today = log.filter(e => sameLocalDay(e.t));
+  document.getElementById('bStatSent').textContent = today.length;
+  document.getElementById('bStatRusak').textContent = today.reduce((a, e) => a + (e.rusak || 0), 0);
+  document.getElementById('bStatQueue').textContent = pendingQueueCount;
+
+  const hist = document.getElementById('bHistory');
+  hist.innerHTML = '';
+  if (log.length === 0) {
+    const empty = document.createElement('div');
+    empty.className = 'b-empty';
+    empty.textContent = 'Belum ada laporan dikirim hari ini';
+    hist.appendChild(empty);
+  } else {
+    log.slice(0, 10).forEach((e, idx) => {
+      const row = document.createElement('div'); row.className = 'b-hist';
+      const left = document.createElement('div');
+      const eq = document.createElement('div'); eq.className = 'eq'; eq.textContent = e.equip || '-';
+      const meta = document.createElement('div'); meta.className = 'meta';
+      const d = new Date(e.t);
+      meta.textContent = (e.type ? e.type + ' · ' : '') +
+        d.toLocaleDateString('id-ID', { day: '2-digit', month: 'short' }) + ' ' +
+        d.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+      left.appendChild(eq); left.appendChild(meta);
+      const tag = document.createElement('span');
+      tag.className = 'tag ' + (e.rusak > 0 ? 'bad' : 'ok');
+      tag.textContent = e.rusak > 0 ? e.rusak + ' rusak' : 'Semua baik';
+      const chev = document.createElement('span'); chev.className = 'chev'; chev.textContent = '›';
+      row.appendChild(left); row.appendChild(tag); row.appendChild(chev);
+      row.addEventListener('click', () => openDetail(e));
+      hist.appendChild(row);
+    });
+  }
+}
+
+function openDetail(e) {
+  const d = new Date(e.t);
+  document.getElementById('dtTitle').textContent = e.equip || 'Detail Inspeksi';
+  document.getElementById('dtSub').textContent = 'Dikirim ' +
+    d.toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' }) + ' pukul ' +
+    d.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+
+  const rows = document.getElementById('dtRows');
+  rows.innerHTML = '';
+  const addRow = (k, v, note) => {
+    if (v === undefined || v === null || v === '') return;
+    const r = document.createElement('div'); r.className = 'confirm-row' + (note ? ' note' : '');
+    const kk = document.createElement('span'); kk.className = 'k'; kk.textContent = k;
+    const vv = document.createElement('span'); vv.className = 'v'; vv.textContent = v;
+    r.appendChild(kk); r.appendChild(vv); rows.appendChild(r);
+  };
+  addRow('Nama Penginput', e.nama);
+  addRow('Lokasi Site', e.lokasi);
+  addRow('Tanggal', e.tanggal ? new Date(e.tanggal + 'T00:00:00').toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' }) : '');
+  addRow('Equipment ID', e.equip);
+  addRow('Type Unit', e.type);
+  addRow(e.jenis === 'DT' ? 'KM' : 'HM', e.hm);
+  addRow('Jenis', e.jenis === 'DT' ? 'Dump Truck' : e.jenis === 'HE' ? 'Heavy Equipment' : '');
+  if (e.total) addRow('Komponen', (e.total - (e.rusak || 0)) + ' baik · ' + (e.rusak || 0) + ' rusak');
+  addRow('Catatan Umum', e.catatan, true);
+
+  const head = document.getElementById('dtIssueHead');
+  const list = document.getElementById('dtIssues');
+  list.innerHTML = '';
+  const items = e.rusakItems || [];
+  if (items.length > 0) {
+    head.style.display = 'flex'; list.style.display = 'block';
+    head.textContent = '⚠ ' + items.length + ' komponen RUSAK';
+    items.forEach(it => {
+      const r = document.createElement('div'); r.className = 'confirm-row';
+      const kk = document.createElement('span'); kk.className = 'k'; kk.style.textTransform = 'none'; kk.style.color = 'var(--text)'; kk.textContent = it.name;
+      const vv = document.createElement('span'); vv.className = 'v'; vv.style.color = 'var(--bad)'; vv.textContent = it.category || '-';
+      r.appendChild(kk); r.appendChild(vv); list.appendChild(r);
+    });
+  } else {
+    head.style.display = e.rusak > 0 ? 'flex' : 'none';
+    head.textContent = e.rusak > 0 ? '⚠ ' + e.rusak + ' komponen RUSAK (rincian tidak tersimpan untuk laporan lama)' : '';
+    list.style.display = 'none';
+  }
+  document.getElementById('detailOverlay').classList.add('open');
+}
+document.getElementById('btnDetailClose').addEventListener('click', () => document.getElementById('detailOverlay').classList.remove('open'));
+document.getElementById('detailOverlay').addEventListener('click', (ev) => {
+  if (ev.target.id === 'detailOverlay') ev.currentTarget.classList.remove('open');
+});
+
+document.getElementById('btnStartInspect').addEventListener('click', () => switchPage('pageHome'));
+
+/* ============================================================
+   DASHBOARD — rekap inspeksi per rentang tanggal.
+   Sumber utama: Google Sheet lewat GAS (?action=dashboard, JSONP).
+   Cadangan: arsip lokal perangkat ini kalau server belum punya endpoint-nya.
+   ============================================================ */
+let dashInited = false;
+let dashRows = [];
+
+function toISODate(d) {
+  const z = n => String(n).padStart(2, '0');
+  return d.getFullYear() + '-' + z(d.getMonth() + 1) + '-' + z(d.getDate());
+}
+function fmtTanggal(iso) {
+  if (!iso) return '-';
+  const m = String(iso).match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (!m) return String(iso);
+  return m[3] + '/' + m[2] + '/' + m[1];
+}
+
+function fetchDashboardViaJsonp(params, timeoutMs = 20000) {
+  return new Promise((resolve) => {
+    if (!SCRIPT_URL || SCRIPT_URL.startsWith('GANTI_')) { resolve(null); return; }
+    const cbName = '__mkgDashCb_' + Date.now();
+    const script = document.createElement('script');
+    let settled = false;
+    const cleanup = () => { delete window[cbName]; script.remove(); };
+    const done = (v) => { if (settled) return; settled = true; cleanup(); resolve(v); };
+    window[cbName] = (data) => done(data && !data.error && Array.isArray(data.rows) ? data : null);
+    script.onerror = () => done(null);
+    const qs = Object.entries(params).map(([k, v]) => k + '=' + encodeURIComponent(v)).join('&');
+    script.src = SCRIPT_URL + (SCRIPT_URL.includes('?') ? '&' : '?') + 'action=dashboard&' + qs + '&callback=' + cbName;
+    document.body.appendChild(script);
+    setTimeout(() => done(null), timeoutMs);
+  });
+}
+
+function normalizeKomponen(v) {
+  if (!v) return [];
+  if (Array.isArray(v)) return v.map(it => typeof it === 'object' && it ? (it.name + (it.category ? '|' + it.category : '')) : String(it));
+  return String(v).split(/\n|;/).map(x => x.trim()).filter(Boolean);
+}
+
+function localDashRows(from, to, jenis) {
+  const seen = new Set();
+  return [...loadArchive(), ...loadSentLog()].filter(e => {
+    if (seen.has(e.t)) return false; seen.add(e.t); return true;
+  }).filter(e => {
+    const tgl = e.tanggal || toISODate(new Date(e.t));
+    return tgl >= from && tgl <= to && (!e.jenis || e.jenis === jenis);
+  }).map(e => ({
+    lokasiSite: e.lokasi || '', tanggal: e.tanggal || toISODate(new Date(e.t)),
+    equipmentId: e.equip || '', typeUnit: e.type || '', hm: e.hm || '',
+    jumlahTemuan: e.rusak || 0,
+    komponenRusak: (e.rusakItems || []).map(it => it.name + (it.category ? '|' + it.category : '')),
+    catatanUmum: e.catatan || ''
+  }));
+}
+
+function setDashRange(days) {
+  const to = new Date(); const from = new Date();
+  from.setDate(to.getDate() - (days - 1));
+  document.getElementById('dFrom').value = toISODate(from);
+  document.getElementById('dTo').value = toISODate(to);
+  document.querySelectorAll('#dQuick button').forEach(b => b.classList.toggle('active', Number(b.dataset.days) === days));
+}
+
+function initDashboard() {
+  const jenisLabel = currentJenis === 'DT' ? 'Dump Truck' : 'Heavy Equipment';
+  document.getElementById('dSub').textContent = 'Rekap hasil inspeksi ' + jenisLabel + ' berdasarkan rentang tanggal';
+  document.getElementById('dThHM').textContent = currentJenis === 'DT' ? 'KM' : 'HM';
+  document.getElementById('pmStep').value = '';
+  if (!dashInited) {
+    dashInited = true;
+    setDashRange(7);
+  }
+  loadDashboard();
+}
+
+async function loadDashboard() {
+  let from = document.getElementById('dFrom').value;
+  let to = document.getElementById('dTo').value;
+  if (!from || !to) { showToast('Isi rentang tanggal dulu', true); return; }
+  if (from > to) { [from, to] = [to, from]; document.getElementById('dFrom').value = from; document.getElementById('dTo').value = to; }
+
+  const btn = document.getElementById('btnDashApply');
+  btn.disabled = true; btn.textContent = 'Memuat...';
+  document.getElementById('dBody').innerHTML = '<tr><td colspan="8" class="d-empty">Memuat data...</td></tr>';
+
+  const res = await fetchDashboardViaJsonp({ from, to, jenis: currentJenis });
+  let source;
+  if (res) {
+    dashRows = res.rows.map(r => ({
+      lokasiSite: r.lokasiSite || '', tanggal: r.tanggal || '', equipmentId: r.equipmentId || '',
+      typeUnit: r.typeUnit || '', hm: r.hm === undefined || r.hm === null ? '' : r.hm,
+      komponenRusak: normalizeKomponen(r.komponenRusak),
+      jumlahTemuan: r.jumlahTemuan !== undefined ? Number(r.jumlahTemuan) : normalizeKomponen(r.komponenRusak).length,
+      catatanUmum: r.catatanUmum || ''
+    }));
+    source = 'server';
+  } else {
+    dashRows = localDashRows(from, to, currentJenis).map(r => Object.assign(r, { komponenRusak: normalizeKomponen(r.komponenRusak) }));
+    source = 'local';
+  }
+  dashRows.sort((a, b) => (b.tanggal || '').localeCompare(a.tanggal || ''));
+
+  const src = document.getElementById('dSource');
+  if (source === 'local') {
+    src.style.display = 'block';
+    src.textContent = '⚠ Data server tidak tersedia — menampilkan laporan yang dikirim dari perangkat ini saja';
+  } else { src.style.display = 'none'; }
+
+  // Isi pilihan site dari data yang ada, pertahankan pilihan sebelumnya kalau masih ada
+  const siteSel = document.getElementById('dSite');
+  const prev = siteSel.value;
+  const sites = [...new Set(dashRows.map(r => r.lokasiSite).filter(Boolean))].sort();
+  siteSel.innerHTML = '<option value="">Semua site</option>';
+  sites.forEach(st => { const o = document.createElement('option'); o.value = st; o.textContent = st; siteSel.appendChild(o); });
+  if (sites.includes(prev)) siteSel.value = prev;
+
+  const typeSel = document.getElementById('dType');
+  const prevType = typeSel.value;
+  const types = [...new Set(dashRows.map(r => r.typeUnit).filter(Boolean))].sort();
+  typeSel.innerHTML = '<option value="">Semua type</option>';
+  types.forEach(t => { const o = document.createElement('option'); o.value = t; o.textContent = t; typeSel.appendChild(o); });
+  if (types.includes(prevType)) typeSel.value = prevType;
+
+  btn.disabled = false; btn.textContent = 'Tampilkan';
+  renderActiveTab();
+}
+
+function filteredRows() {
+  const site = document.getElementById('dSite').value;
+  const type = document.getElementById('dType').value;
+  return dashRows.filter(r => (!site || r.lokasiSite === site) && (!type || r.typeUnit === type));
+}
+
+let dashTab = 'rekap';
+function renderActiveTab() {
+  document.getElementById('dTabRekap').style.display = dashTab === 'rekap' ? 'block' : 'none';
+  document.getElementById('dTabPareto').style.display = dashTab === 'pareto' ? 'block' : 'none';
+  document.getElementById('dTabUmur').style.display = dashTab === 'umur' ? 'block' : 'none';
+  document.querySelectorAll('#dTabs button').forEach(b => b.classList.toggle('active', b.dataset.tab === dashTab));
+  if (dashTab === 'rekap') renderDashboard();
+  else if (dashTab === 'pareto') renderPareto();
+  else renderUmur();
+}
+
+/* ---------- Pareto kerusakan ---------- */
+function countKomponen(rows) {
+  const m = {};
+  rows.forEach(r => (r.komponenRusak || []).forEach(k => {
+    const nama = k.split('|')[0];
+    if (!m[nama]) m[nama] = { nama, n: 0, units: new Set() };
+    m[nama].n++;
+    m[nama].units.add(r.equipmentId || '?');
+  }));
+  return Object.values(m).sort((a, b) => b.n - a.n || a.nama.localeCompare(b.nama));
+}
+
+function buildParetoBlock(title, rows, limit, withCum) {
+  const items = countKomponen(rows);
+  const total = items.reduce((a, it) => a + it.n, 0);
+  const block = document.createElement('div'); block.className = 'pa-block';
+  const head = document.createElement('div'); head.className = 'pa-head';
+  const b = document.createElement('b'); b.textContent = title;
+  const sp = document.createElement('span'); sp.textContent = total + ' temuan · ' + rows.length + ' laporan';
+  head.appendChild(b); head.appendChild(sp); block.appendChild(head);
+  if (items.length === 0) {
+    const e = document.createElement('div'); e.className = 'pa-more'; e.textContent = 'Tidak ada temuan RUSAK';
+    block.appendChild(e); return block;
+  }
+  let cum = 0;
+  items.slice(0, limit).forEach(it => {
+    cum += it.n;
+    const row = document.createElement('div'); row.className = 'pa-row';
+    const line = document.createElement('div'); line.className = 'pa-line';
+    const nm = document.createElement('span'); nm.className = 'nm'; nm.textContent = it.nama;
+    const ct = document.createElement('span'); ct.className = 'ct';
+    ct.textContent = it.n + '× ';
+    const em = document.createElement('em'); em.textContent = '· ' + it.units.size + ' unit · ' + Math.round(it.n / total * 100) + '%';
+    ct.appendChild(em);
+    line.appendChild(nm); line.appendChild(ct);
+    const bar = document.createElement('div'); bar.className = 'pa-bar';
+    const fill = document.createElement('i'); fill.style.width = Math.round(it.n / items[0].n * 100) + '%';
+    bar.appendChild(fill);
+    row.appendChild(line); row.appendChild(bar);
+    if (withCum) {
+      const meta = document.createElement('div'); meta.className = 'pa-meta';
+      meta.textContent = 'Kumulatif ' + Math.round(cum / total * 100) + '%';
+      row.appendChild(meta);
+    }
+    block.appendChild(row);
+  });
+  if (items.length > limit) {
+    const more = document.createElement('div'); more.className = 'pa-more';
+    more.textContent = '+ ' + (items.length - limit) + ' komponen lain';
+    block.appendChild(more);
+  }
+  return block;
+}
+
+function renderPareto() {
+  const rows = filteredRows();
+  const out = document.getElementById('dParetoOut');
+  out.innerHTML = '';
+  const mode = document.getElementById('dGroupBy').value;
+  if (rows.length === 0) {
+    out.innerHTML = '<div class="b-empty">Tidak ada data inspeksi pada rentang tanggal ini</div>'; return;
+  }
+  if (mode === 'total') { out.appendChild(buildParetoBlock('Semua unit', rows, 15, true)); return; }
+  const key = mode === 'type' ? 'typeUnit' : 'lokasiSite';
+  const groups = {};
+  rows.forEach(r => { const g = r[key] || '(kosong)'; (groups[g] = groups[g] || []).push(r); });
+  Object.entries(groups)
+    .map(([g, rs]) => [g, rs, rs.reduce((a, r) => a + (r.jumlahTemuan || 0), 0)])
+    .sort((a, b) => b[2] - a[2])
+    .forEach(([g, rs]) => out.appendChild(buildParetoBlock(g, rs, 5, false)));
+}
+
+/* ---------- Umur komponen vs HM/KM ---------- */
+function parseMeter(v) {
+  if (v === null || v === undefined || v === '') return 0;
+  if (typeof v === 'number') return isFinite(v) ? v : 0;
+  let t = String(v).trim().replace(/[^\d.,]/g, '');
+  if (/^\d{1,3}(\.\d{3})+(,\d+)?$/.test(t)) t = t.replace(/\./g, '').replace(',', '.');   // 12.345 / 12.345,5
+  else t = t.replace(/,/g, '.');
+  const n = parseFloat(t);
+  return isFinite(n) ? n : 0;
+}
+const fmtNum = n => Math.round(n).toLocaleString('id-ID');
+
+/* ---------- Analisis PM (TA dilakukan tiap PM) ---------- */
+let pmView = 'unit', pmUnitSel = '';
+
+function pmStepVal() {
+  const v = Number(document.getElementById('pmStep').value);
+  return v > 0 ? v : (currentJenis === 'DT' ? 10000 : 500);
+}
+function pmMilestone(m, step) { return Math.round(m / step); }
+function pmLabel(k, step) { return k === 0 ? 'Sebelum PM pertama' : 'PM ' + fmtNum(k * step); }
+function mkEl(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text !== undefined) e.textContent = text; return e; }
+function komNama(k) { return k.split('|')[0]; }
+
+function renderUmur() {
+  const U = currentJenis === 'DT' ? 'KM' : 'HM';
+  const stepInput = document.getElementById('pmStep');
+  if (!stepInput.value) {
+    let saved = 0; try { saved = Number(localStorage.getItem('mkgPmStep_' + currentJenis)) || 0; } catch (e) {}
+    stepInput.value = saved || (currentJenis === 'DT' ? 10000 : 500);
+  }
+  document.getElementById('pmUnitLbl').textContent = U + ' per PM';
+  document.getElementById('pmNote').innerHTML =
+    '<b>Analisis per PM</b> — TA dilakukan tiap PM, jadi setiap laporan dianggap satu titik PM pada ' + U +
+    ' tertentu. Laporan dikelompokkan ke PM terdekat (kelipatan interval). Hanya laporan yang terisi ' + U + '-nya yang bisa dianalisis.';
+
+  const step = pmStepVal();
+  const rows = filteredRows();
+  const ev = rows.map(r => Object.assign({}, r, { m: parseMeter(r.hm) }));
+  const out = document.getElementById('pmOut');
+  out.innerHTML = '';
+  document.querySelectorAll('#pmView button').forEach(b => b.classList.toggle('active', b.dataset.view === pmView));
+
+  if (ev.length === 0) { out.appendChild(mkEl('div', 'b-empty', 'Tidak ada data inspeksi pada rentang tanggal ini')); return; }
+  const noM = ev.filter(e => e.m <= 0).length;
+  if (noM > 0 && pmView !== 'unit') out.appendChild(mkEl('div', 'd-note', '⚠ ' + noM + ' dari ' + ev.length + ' laporan tidak punya isian ' + U + ' dan tidak ikut dihitung.'));
+
+  if (pmView === 'unit') renderPmUnit(out, ev, step, U);
+  else if (pmView === 'band') renderPmBand(out, ev.filter(e => e.m > 0), step, U);
+  else renderPmKomp(out, ev.filter(e => e.m > 0), step, U);
+}
+
+/* (1) Riwayat per unit: tiap TA/PM, komponen apa yang rusak */
+function renderPmUnit(out, ev, step, U) {
+  const byUnit = {};
+  ev.forEach(e => { const id = e.equipmentId || '?'; (byUnit[id] = byUnit[id] || []).push(e); });
+  const ids = Object.keys(byUnit).sort((a, b) => byUnit[b].length - byUnit[a].length || a.localeCompare(b));
+  if (!ids.includes(pmUnitSel)) pmUnitSel = ids[0];
+
+  const sel = mkEl('select', 'pm-sel');
+  ids.forEach(id => { const o = mkEl('option', '', id + ' — ' + byUnit[id].length + ' TA'); o.value = id; sel.appendChild(o); });
+  sel.value = pmUnitSel;
+  sel.addEventListener('change', () => { pmUnitSel = sel.value; renderUmur(); });
+  const ctl = mkEl('div', 'd-ctl'); ctl.appendChild(mkEl('label', '', 'Unit')); ctl.appendChild(sel);
+  out.appendChild(ctl);
+
+  const list = byUnit[pmUnitSel].slice().sort((a, b) => (a.m || 0) - (b.m || 0) || (a.tanggal || '').localeCompare(b.tanggal || ''));
+  let prev = new Set();
+  list.forEach(e => {
+    const names = e.komponenRusak.map(komNama);
+    const cur = new Set(names);
+    const block = mkEl('div', 'pa-block');
+    const head = mkEl('div', 'pa-head');
+    const left = mkEl('b', '', e.m > 0 ? fmtNum(e.m) + ' ' + U : '(tanpa ' + U + ')');
+    const right = mkEl('span', '', (e.m > 0 ? pmLabel(pmMilestone(e.m, step), step) + ' · ' : '') + fmtTanggal(e.tanggal) + ' · ' + names.length + ' temuan');
+    head.appendChild(left); head.appendChild(right); block.appendChild(head);
+
+    if (names.length === 0) block.appendChild(mkEl('div', 'pm-ok', '✓ Semua komponen baik'));
+    e.komponenRusak.forEach(k => {
+      const [nama, cat] = k.split('|');
+      const row = mkEl('div', 'pa-row');
+      const line = mkEl('div', 'pa-line');
+      const nm = mkEl('span', 'nm', nama);
+      const tag = mkEl('span', 'pm-tag ' + (prev.has(nama) ? 'cont' : 'new'), prev.has(nama) ? 'masih rusak' : 'baru');
+      nm.appendChild(tag);
+      line.appendChild(nm);
+      line.appendChild(mkEl('span', 'ct', cat || ''));
+      row.appendChild(line); block.appendChild(row);
+    });
+    const fixed = [...prev].filter(n => !cur.has(n));
+    if (fixed.length) block.appendChild(mkEl('div', 'pm-ok', '✓ Tidak lagi rusak dibanding TA sebelumnya: ' + fixed.join(', ')));
+    out.appendChild(block);
+    prev = cur;
+  });
+  out.appendChild(mkEl('div', 'd-note', '"Masih rusak" = komponen juga rusak di TA sebelumnya pada unit ini (kemungkinan belum diperbaiki, atau rusak lagi).'));
+}
+
+/* (2) Per rentang PM: beberapa unit pada ±PM yang sama, kerusakan apa yang muncul */
+function renderPmBand(out, ev, step, U) {
+  if (ev.length === 0) { out.appendChild(mkEl('div', 'b-empty', 'Belum ada laporan yang terisi ' + U)); return; }
+  const groups = {};
+  ev.forEach(e => { const k = pmMilestone(e.m, step); (groups[k] = groups[k] || []).push(e); });
+  Object.keys(groups).map(Number).sort((a, b) => a - b).forEach(k => {
+    const g = groups[k];
+    const units = new Set(g.map(e => e.equipmentId || '?'));
+    const ms = g.map(e => e.m);
+    const comp = {};
+    let totalTemuan = 0;
+    g.forEach(e => { totalTemuan += e.komponenRusak.length; e.komponenRusak.forEach(x => {
+      const n = komNama(x); if (!comp[n]) comp[n] = { n: 0, units: new Set() };
+      comp[n].n++; comp[n].units.add(e.equipmentId || '?');
+    }); });
+    const items = Object.entries(comp).sort((a, b) => b[1].n - a[1].n || a[0].localeCompare(b[0]));
+
+    const block = mkEl('div', 'pa-block');
+    const head = mkEl('div', 'pa-head');
+    head.appendChild(mkEl('b', '', pmLabel(k, step)));
+    head.appendChild(mkEl('span', '', g.length + ' TA · ' + units.size + ' unit'));
+    block.appendChild(head);
+    block.appendChild(mkEl('div', 'pa-meta', 'Aktual ' + fmtNum(Math.min(...ms)) + ' – ' + fmtNum(Math.max(...ms)) + ' ' + U + ' · rata-rata ' + (totalTemuan / g.length).toFixed(1) + ' temuan per TA'));
+    if (items.length === 0) block.appendChild(mkEl('div', 'pm-ok', '✓ Tidak ada temuan RUSAK pada rentang ini'));
+    items.slice(0, 8).forEach(([nama, c]) => {
+      const row = mkEl('div', 'pa-row');
+      const line = mkEl('div', 'pa-line');
+      line.appendChild(mkEl('span', 'nm', nama));
+      const ct = mkEl('span', 'ct', c.n + '/' + g.length + ' TA ');
+      ct.appendChild(mkEl('em', '', '· ' + Math.round(c.n / g.length * 100) + '%'));
+      line.appendChild(ct);
+      const bar = mkEl('div', 'pa-bar'); const fill = mkEl('i'); fill.style.width = Math.round(c.n / g.length * 100) + '%'; bar.appendChild(fill);
+      row.appendChild(line); row.appendChild(bar);
+      const ul = [...c.units]; 
+      row.appendChild(mkEl('div', 'pa-meta units', 'Unit: ' + ul.slice(0, 6).join(', ') + (ul.length > 6 ? ' +' + (ul.length - 6) : '')));
+      block.appendChild(row);
+    });
+    if (items.length > 8) block.appendChild(mkEl('div', 'pa-more', '+ ' + (items.length - 8) + ' komponen lain'));
+    out.appendChild(block);
+  });
+}
+
+/* (3) Per komponen: rata-rata di keseluruhan unit */
+function renderPmKomp(out, ev, step, U) {
+  if (ev.length === 0) { out.appendChild(mkEl('div', 'b-empty', 'Belum ada laporan yang terisi ' + U)); return; }
+  const totalTA = ev.length;
+  const totalUnits = new Set(ev.map(e => e.equipmentId || '?')).size;
+  const map = {};
+  ev.forEach(e => e.komponenRusak.forEach(x => {
+    const n = komNama(x);
+    if (!map[n]) map[n] = { nama: n, n: 0, units: new Set(), ms: [], pm: {} };
+    const c = map[n]; c.n++; c.units.add(e.equipmentId || '?'); c.ms.push(e.m);
+    const k = pmMilestone(e.m, step); c.pm[k] = (c.pm[k] || 0) + 1;
+  }));
+  const list = Object.values(map).sort((a, b) => b.units.size - a.units.size || b.n - a.n).slice(0, 60);
+
+  const info = mkEl('div', 'd-summary');
+  [['TA', totalTA], ['Unit', totalUnits], ['Komponen pernah rusak', Object.keys(map).length]].forEach(([k, v]) => {
+    const sp = mkEl('span', '', k + ': '); sp.appendChild(mkEl('b', '', v)); info.appendChild(sp);
+  });
+  out.appendChild(info);
+
+  const wrap = mkEl('div', 'd-table-wrap');
+  const table = mkEl('table', 'd-table'); table.style.minWidth = '820px';
+  const thead = mkEl('thead'); const hr = mkEl('tr');
+  ['Komponen', 'Unit terkena', 'Temuan', 'Rata-rata ' + U, 'Min – Maks', 'Paling sering di'].forEach((h, i) => {
+    const th = mkEl('th', i >= 3 ? 'right' : '', h); hr.appendChild(th);
+  });
+  thead.appendChild(hr); table.appendChild(thead);
+  const tb = mkEl('tbody');
+  if (list.length === 0) {
+    const tr = mkEl('tr'); const td = mkEl('td', 'd-empty', 'Tidak ada temuan RUSAK pada data ini'); td.colSpan = 6; tr.appendChild(td); tb.appendChild(tr);
+  }
+  list.forEach(c => {
+    const tr = mkEl('tr');
+    const tdN = mkEl('td', '', c.nama);
+    tr.appendChild(tdN);
+    const tdU = mkEl('td', 'mono', c.units.size + ' / ' + totalUnits + ' unit (' + Math.round(c.units.size / totalUnits * 100) + '%)');
+    tr.appendChild(tdU);
+    const tdT = mkEl('td', 'mono', c.n + '× · ' + Math.round(c.n / totalTA * 100) + '% TA');
+    if (c.n < 3) tdT.appendChild(mkEl('span', 'tag-low', 'data sedikit'));
+    tr.appendChild(tdT);
+    const avg = c.ms.reduce((a, b) => a + b, 0) / c.ms.length;
+    tr.appendChild(mkEl('td', 'right', fmtNum(avg)));
+    tr.appendChild(mkEl('td', 'right', c.ms.length > 1 ? fmtNum(Math.min(...c.ms)) + ' – ' + fmtNum(Math.max(...c.ms)) : fmtNum(c.ms[0])));
+    const top = Object.entries(c.pm).sort((a, b) => b[1] - a[1])[0];
+    tr.appendChild(mkEl('td', 'right', pmLabel(Number(top[0]), step) + ' (' + top[1] + '×)'));
+    tb.appendChild(tr);
+  });
+  table.appendChild(tb); wrap.appendChild(table); out.appendChild(wrap);
+  out.appendChild(mkEl('div', 'd-note', '"Unit terkena" = jumlah unit berbeda yang pernah punya temuan komponen itu, dari seluruh unit yang punya TA pada filter di atas.'));
+}
+
+function renderDashboard() {
+  const rows = filteredRows();
+  const totalTemuan = rows.reduce((a, r) => a + (r.jumlahTemuan || 0), 0);
+  const unitRusak = rows.filter(r => r.jumlahTemuan > 0).length;
+
+  const sum = document.getElementById('dSummary');
+  sum.innerHTML = '';
+  [['Laporan', rows.length], ['Unit ada temuan', unitRusak], ['Total temuan', totalTemuan]].forEach(([k, v]) => {
+    const sp = document.createElement('span'); sp.textContent = k + ': ';
+    const b = document.createElement('b'); b.textContent = v; sp.appendChild(b); sum.appendChild(sp);
+  });
+
+  const body = document.getElementById('dBody');
+  body.innerHTML = '';
+  if (rows.length === 0) {
+    body.innerHTML = '<tr><td colspan="8" class="d-empty">Tidak ada data inspeksi pada rentang tanggal ini</td></tr>';
+    return;
+  }
+  const td = (text, cls) => { const c = document.createElement('td'); if (cls) c.className = cls; c.textContent = text; return c; };
+  rows.forEach(r => {
+    const tr = document.createElement('tr');
+    tr.appendChild(td(r.lokasiSite || '-'));
+    tr.appendChild(td(fmtTanggal(r.tanggal), 'mono'));
+    tr.appendChild(td(r.equipmentId || '-', 'mono'));
+    tr.appendChild(td(r.typeUnit || '-'));
+    tr.appendChild(td(r.hm !== '' ? String(r.hm) : '-', 'mono'));
+    tr.appendChild(td(r.jumlahTemuan || 0, 'num ' + (r.jumlahTemuan > 0 ? 'bad' : 'ok')));
+    const kc = document.createElement('td'); kc.className = 'komp';
+    if (r.komponenRusak.length === 0) { kc.textContent = '-'; }
+    else r.komponenRusak.forEach(k => {
+      const [nama, cat] = k.split('|');
+      const d = document.createElement('div'); d.textContent = nama;
+      if (cat) { const sm = document.createElement('small'); sm.textContent = ' — ' + cat; d.appendChild(sm); }
+      kc.appendChild(d);
+    });
+    tr.appendChild(kc);
+    tr.appendChild(td(r.catatanUmum || '-', 'cat'));
+    body.appendChild(tr);
+  });
+}
+
+document.getElementById('btnDashApply').addEventListener('click', () => {
+  document.querySelectorAll('#dQuick button').forEach(b => b.classList.remove('active'));
+  loadDashboard();
+});
+document.querySelectorAll('#dQuick button').forEach(b => {
+  b.addEventListener('click', () => { setDashRange(Number(b.dataset.days)); loadDashboard(); });
+});
+document.getElementById('dSite').addEventListener('change', renderActiveTab);
+document.getElementById('dType').addEventListener('change', renderActiveTab);
+document.getElementById('dGroupBy').addEventListener('change', renderPareto);
+document.getElementById('pmStep').addEventListener('input', () => {
+  try { localStorage.setItem('mkgPmStep_' + currentJenis, document.getElementById('pmStep').value); } catch (e) {}
+  renderUmur();
+});
+document.querySelectorAll('#pmView button').forEach(b => {
+  b.addEventListener('click', () => { pmView = b.dataset.view; renderUmur(); });
+});
+document.querySelectorAll('#dTabs button').forEach(b => {
+  b.addEventListener('click', () => { dashTab = b.dataset.tab; renderActiveTab(); });
 });
 
 // ---------- Bottom nav (tab switching) ----------
-function switchPage(pageId) {
+/* ---------- Peringatan keluar dari form (tab lain / tombol Kembali) ---------- */
+function currentPageId() {
+  const el = document.querySelector('main.active, .settings-page.active');
+  return el ? el.id : null;
+}
+function hasFormProgress() {
+  if (typeof state === 'undefined') return false;
+  const adaItem = Object.values(state).some(st => st.status);
+  return adaItem ||
+    document.getElementById('fEquip').value.trim() !== '' ||
+    document.getElementById('fHM').value.trim() !== '' ||
+    document.getElementById('fCatatan').value.trim() !== '';
+}
+function confirmLeaveForm() {
+  return confirm('Form inspeksi belum dikirim.\n\nDraft tersimpan otomatis di perangkat ini, tapi apakah kamu yakin ingin keluar dari form?');
+}
+
+function switchPage(pageId, force) {
+  if (!force && currentPageId() === 'pageHome' && pageId !== 'pageHome' &&
+      hasFormProgress() && !justSubmitted && !confirmLeaveForm()) return;
   document.querySelectorAll('main, .settings-page').forEach(el => el.classList.remove('active'));
   document.getElementById(pageId).classList.add('active');
   document.querySelectorAll('.bottom-nav-item').forEach(b => {
-    b.classList.toggle('active', b.dataset.page === pageId);
+    b.classList.toggle('active', b.dataset.page === (pageId === 'pageHome' ? 'pageBeranda' : pageId));
   });
   document.querySelector('footer.submit-bar').classList.toggle('hidden', pageId !== 'pageHome');
+  // Gauge, chip section & peringatan RUSAK cuma relevan di halaman form
+  document.querySelector('header.top').classList.toggle('compact', pageId !== 'pageHome');
+  if (pageId === 'pageBeranda') renderBeranda();
+  if (pageId === 'pageDashboard') initDashboard();
+  window.scrollTo({ top: 0 });
 }
-document.getElementById('navHome').addEventListener('click', () => switchPage('pageHome'));
+/* Tombol Kembali (HP/browser): tanpa guard ini, sekali tekan langsung keluar aplikasi.
+   Satu state "penjaga" selalu disisakan di riwayat; tiap Kembali ditangkap di sini. */
+let historyGuardReady = false;
+function ensureHistoryGuard() {
+  if (historyGuardReady) return;
+  historyGuardReady = true;
+  try { history.pushState({ guard: 1 }, ''); } catch (e) {}
+}
+window.addEventListener('popstate', () => {
+  if (!historyGuardReady) return;
+  const pushGuard = () => { try { history.pushState({ guard: 1 }, ''); } catch (e) {} };
+  const cur = currentPageId();
+  if (cur === 'pageHome') {
+    if (hasFormProgress() && !justSubmitted && !confirmLeaveForm()) { pushGuard(); return; }
+    pushGuard(); switchPage('pageBeranda', true); return;
+  }
+  if (cur === 'pageSettings' || cur === 'pageDashboard') { pushGuard(); switchPage('pageBeranda', true); return; }
+  // Sedang di Beranda
+  if (!confirm('Keluar dari aplikasi?')) { pushGuard(); return; }
+  historyGuardReady = false;
+  history.back();
+});
+
+document.getElementById('navBeranda').addEventListener('click', () => switchPage('pageBeranda'));
+document.getElementById('navDashboard').addEventListener('click', () => switchPage('pageDashboard'));
 document.getElementById('navSettings').addEventListener('click', () => switchPage('pageSettings'));
 
 document.getElementById('btnChangeMode').addEventListener('click', () => {
@@ -691,6 +1660,8 @@ function applyMode(mode) {
   }
 
   refreshUI();
+  ensureHistoryGuard();
+  switchPage('pageBeranda', true); // setelah login / ganti mode, mendarat di Beranda dulu — bukan langsung form
 }
 
 function enterAppAfterLogin() {
@@ -720,16 +1691,15 @@ const SECTIONS_HE = [
       "Pipa, Sambungan, Hose, Clamp (Air Intake)"
     ]},
     { title: "Exhaust System", items: [
-      "Exhaust Manifold","Muffler",
-      "Pipa, Sambungan, Hose, Clamp (Exhaust system)"
+      "Exhaust Manifold","Muffler"
     ]},
     { title: "Fuel System", items: [
-      "Pompa Tangan","Filter Solar","Fuel Transfer Pump","Injection Pump/Rail Pump",
+      "Filter Solar","Fuel Transfer Pump","Injection Pump/Rail Pump",
       "Rail Manifold","Injection Pipe","Fuel Tank",
       "Pipa, Sambungan, Hose, Clamp (Fuel System)"
     ]},
     { title: "Lubrication", items: [
-      "Dipstick Oil","Pipa Pengisian Oil","Oil Pump","Oil Cooler","Oil Pan",
+      "Dipstick Oil","Pipa Pengisian Oil","Oil Cooler","Oil Pan",
       "Pipa, Sambungan, Hose, Clamp (Lubrication)"
     ]},
     { title: "Cooling System", items: [
@@ -740,11 +1710,10 @@ const SECTIONS_HE = [
   ]},
   { title: "Electrical System", subs: [
     { title: "Charging System", items: [
-      "Alternator","Battery","Main Relay","Circuit Breaker","Fuse Box","Kabel"
+      "Alternator","Battery","Fuse Box"
     ]},
     { title: "Sensor", items: [
-      "Sensor & Selenoid Engine","RH Joystick Sensor","LH Joystick Sensor",
-      "Travel Sensor","Sensor Hydraulic Pump","Selenoid Control Valve"
+      "Sensor Hydraulic Pump","Selenoid Control Valve"
     ]},
     { title: "Starting System", items: [
       "Starting Motor","Start Relay","Circuit Braker","Kabel.","Disconnect Switch","Lampu"
@@ -775,12 +1744,12 @@ const SECTIONS_HE = [
     ]},
     { title: "LH", items: [
       "LH Top Roller","LH Track Roller","LH Idler","LH Track Adjuster",
-      "LHSprocket","LH Track Link","LH Track Shoe"
+      "LH Sprocket","LH Track Link","LH Track Shoe"
     ]}
   ]},
   { title: "Bucket", subs: [
     { title: null, items: [
-      "Kuku Bucket","Adapter","Plat Adapter","Plat Lantai","Plat Samping","Plat Punggung",
+      "Kuku Bucket","Adapter","Plat Adapter","Plat Lantai","Plat Samping",
       "Dublingan Samping","Dublingan Belakang","Kupingan Bucket","Pin Bucket","Pin Link H"
     ]}
   ]},
@@ -802,10 +1771,9 @@ const SECTIONS_HE = [
 
 /* Struktur section/subsection DT disusun ulang (Agustus 2026) mengikuti
    urutan kolom terbaru di Google Sheet: Engine > Electrical System >
-   Operator Station > Power Train (Transmisi, Propeller Shaft, FA1, FA2,
-   RA1) > Steering System > Hydraulic System > Brake System > Under &
-   Upper Structure (Suspension, Body/Bak, Axle 1-4, RA2, Inter Axle,
-   Frame & Chassis). Nama tiap item HARUS persis sama dengan header kolom
+   Operator Station > Power Train (Transmisi, Propeller Shaft, FA1, FA2)
+   > Steering System > Hydraulic System > Brake System > Under & Upper
+   Structure (Suspension, Body/Bak, Axle 1-2, RA1, RA2, Frame & Chassis). Nama tiap item HARUS persis sama dengan header kolom
    di Sheet karena dipakai sebagai key payload.komponen. */
 const SECTIONS_DT = [
   { title: "Engine", subs: [
@@ -818,16 +1786,16 @@ const SECTIONS_DT = [
       "Pipa, Sambungan, Hose, Clamp (Exhaust system)"
     ]},
     { title: "Fuel System", items: [
-      "Pompa Tangan","Filter Solar","Fuel Transfer Pump","Injection Pump/Rail Pump",
-      "Rail Manifold","Injection Pipe","Fuel Tank",
+      "Pompa Tangan","Filter Solar","Injection Pump/Rail Pump",
+      "Injection Pipe","Fuel Tank",
       "Pipa, Sambungan, Hose, Clamp (Fuel System)"
     ]},
     { title: "Lubrication", items: [
-      "Dipstick Oil","Pipa Pengisian Oil","Oil Pump","Oil Cooler","Oil Pan",
+      "Dipstick Oil","Pipa Pengisian Oil","Oil Pan",
       "Pipa, Sambungan, Hose, Clamp (Lubrication)"
     ]},
     { title: "Cooling System", items: [
-      "Water Pump","Radiator","Regulator",
+      "Water Pump","Radiator",
       "Pipa, Sambungan, Hose, Clamp (Cooling System)",
       "Engine Belt","Belt Tensioner","Fan"
     ]}
@@ -836,7 +1804,7 @@ const SECTIONS_DT = [
     { title: "Charging System", items: ["Alternator","Battery"] },
     { title: "Sensor", items: [
       "Oil Pressure Sensor","Water Temperature Sensor","Speed Sensor",
-      "RPM Sensor","Fuel Level Sensor","ABS Sensor"
+      "RPM Sensor","Fuel Level Sensor"
     ]},
     { title: "Starting System", items: [
       "Starting Motor","Start Relay","Circuit Breaker","Kabel",
@@ -863,10 +1831,6 @@ const SECTIONS_DT = [
     ]},
     { title: "Front Axle 2 (Depan - 12 Roda)", items: [
       "FA 2 - Kingpin","FA 2 - Bearing Roda Depan","FA 2 - Steering Knuckle","FA 2 - Drag Link"
-    ]},
-    { title: "Rear Axle 1 (Tandem Depan)", items: [
-      "RA 1 - Gardan/Differential","RA 1 - Oli Gardan","RA 1 - Housing Axle",
-      "RA 1 - Bearing Axle","RA 1 - Breather Gardan"
     ]}
   ]},
   { title: "Steering System", subs: [
@@ -883,7 +1847,7 @@ const SECTIONS_DT = [
   ]},
   { title: "Brake System", subs: [
     { title: "Servis Brake", items: [
-      "Brake Chamber","Brake Drum/Disc","Kampas Rem","Brake Valve","Selang Angin Rem"
+      "Brake Chamber","Brake Drum","Kampas Rem","Brake Valve","Selang Angin Rem"
     ]},
     { title: "Parking Brake", items: ["Brake Chamber Parkir"] },
     { title: "Air System", items: [
@@ -898,21 +1862,20 @@ const SECTIONS_DT = [
       "Bak/Vessel","Engsel Bak","Tailgate/Pintu Belakang Bak","Kunci Tailgate",
       "Karet Bak","Support Bak/Prop Stand","Plat Lantai Bak","Plat Samping Bak"
     ]},
-    { title: "Axle 1 - Depan", items: ["Axle 1 - Ban RH","Axle 1 - Ban LH"] },
+    { title: "Axle 1 - Depan", items: [
+      "Axle 1 - Ban RH","Axle 1 - Ban LH","Axle 1 - Mur & Baut Roda"
+    ]},
     { title: "Axle 2 - Depan 12 Roda", items: [
-      "Axle 2 - Ban RH","Axle 2 - Ban LH","Velg/Rim","Mur Roda"
+      "Axle 2 - Ban RH","Axle 2 - Ban LH","Axle 2 - Mur & Baut Roda"
     ]},
-    { title: "Axle 3 - Tandem Depan", items: [
-      "Axle 3 - Ban RH Luar","Axle 3 - Ban RH Dalam","Axle 3 - Ban LH Luar","Axle 3 - Ban LH Dalam"
+    { title: "Rear Axle 1", items: [
+      "RA 1 - Gardan/Differential","RA 1 - Oli Gardan","RA 1 - Housing Axle",
+      "RA 1 - Bearing Axle","RA 1 - Breather Gardan","RA 1 - Ban Luar Dalam R/H - L/H"
     ]},
-    { title: "Axle 4 - Tandem Belakang", items: [
-      "Axle 4 - Ban RH Luar","Axle 4 - Ban RH Dalam","Axle 4 - Ban LH Luar","Axle 4 - Ban LH Dalam"
-    ]},
-    { title: "Rear Axle (Tandem Belakang)", items: [
+    { title: "Rear Axle 2", items: [
       "RA 2 - Gardan/Differential","RA 2 - Oli Gardan","RA 2 - Housing Axle",
-      "RA 2 - Bearing Axle","RA 2 - Breather Gardan"
+      "RA 2 - Bearing Axle","RA 2 - Breather Gardan","RA 2 - Ban Luar Dalam R/H - L/H"
     ]},
-    { title: "Inter Axle", items: ["Inter-Axle","Selang/Pipa Antar Axle"] },
     { title: "Frame & Chassis", items: [
       "Chassis Frame","Cross Member","Towing Hook","Bumper"
     ]}
@@ -1321,6 +2284,7 @@ function refreshUI() {
       ? 'Lengkapi data unit & Catatan Umum di atas terlebih dahulu'
       : `${missing} komponen belum diisi`;
   }
+  if (typeof renderBeranda === 'function' && document.getElementById('pageBeranda').classList.contains('active')) renderBeranda();
 }
 
 ['fNama','fLokasi','fTanggal','fEquip','fType','fHM'].forEach(id => {
@@ -1543,7 +2507,10 @@ function resetForm(clearNama = false) {
   // biasanya isi beberapa unit berturut-turut, jadi nama tetap terisi antar
   // laporan. Hanya dikosongkan kalau clearNama=true (tombol "Reset Form" manual).
   if (clearNama) document.getElementById('fNama').value = '';
-  const fLokasi = document.getElementById('fLokasi'); fLokasi.value = ''; fLokasi.dataset.confirmed = '';
+  // Lokasi Site SENGAJA dipertahankan (operator biasanya input banyak unit di site yang sama).
+  const fLokasi = document.getElementById('fLokasi');
+  const keepLok = fLokasi.value.trim() || (loadSavedMode() || {}).lokasi || '';
+  fLokasi.value = keepLok; fLokasi.dataset.confirmed = keepLok;
   const fEquip  = document.getElementById('fEquip');  fEquip.value  = ''; fEquip.dataset.confirmed  = '';
   const fType   = document.getElementById('fType');   fType.value   = ''; fType.dataset.confirmed   = '';
   document.getElementById('fHM').value = '';
@@ -1679,6 +2646,8 @@ async function queueDelete(idKey) {
 }
 
 function updatePendingSyncUI(count) {
+  pendingQueueCount = count;
+  const bq = document.getElementById('bStatQueue'); if (bq) bq.textContent = count;
   const el = document.getElementById('pendingSyncStatus');
   if (count > 0) {
     el.style.display = 'block';
@@ -1761,6 +2730,20 @@ document.getElementById('btnConfirmSend').addEventListener('click', async () => 
   btn.innerHTML = '<span class="btn-spinner"></span>Mengirim...';
 
   const payload = buildPayload();
+  const logEntry = {
+    t: Date.now(),
+    equip: document.getElementById('fEquip').value.trim(),
+    type: document.getElementById('fType').value.trim(),
+    rusak: Object.values(state).filter(st => st.status === 'RUSAK').length,
+    jenis: currentJenis,
+    nama: document.getElementById('fNama').value.trim(),
+    lokasi: document.getElementById('fLokasi').value.trim(),
+    tanggal: document.getElementById('fTanggal').value,
+    hm: document.getElementById('fHM').value.trim(),
+    catatan: document.getElementById('fCatatan').value.trim(),
+    total: Object.keys(state).length,
+    rusakItems: Object.entries(state).filter(([n, st]) => st.status === 'RUSAK').map(([n, st]) => ({ name: n, category: st.category || '' }))
+  };
 
   try {
     // Simpan ke antrian DULU sebelum coba kirim — supaya kalaupun tab
@@ -1773,6 +2756,7 @@ document.getElementById('btnConfirmSend').addEventListener('click', async () => 
 
   const result = await sendToServer(payload);
   closeConfirmModal();
+  logSent(logEntry); // tercatat baik langsung terkirim maupun masuk antrian (antrian ditampilkan terpisah)
 
   if (result.ok) {
     try { await queueDelete(payload.idKey); } catch (e) {}
@@ -1790,7 +2774,7 @@ document.getElementById('btnConfirmSend').addEventListener('click', async () => 
   btn.textContent = 'Kirim Laporan Teknikal Analisis';
   sendBtn.disabled = false;
   sendBtn.textContent = 'Ya, Kirim Sekarang';
-  setTimeout(resetForm, 1400);
+  setTimeout(() => { resetForm(); switchPage('pageBeranda', true); }, 1400);
 });
 
 /* ---------------- Registrasi Service Worker (biar bisa dibuka offline) ---------------- */

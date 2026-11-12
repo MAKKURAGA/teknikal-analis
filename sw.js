@@ -17,11 +17,11 @@
  *   -> selalu lewat network langsung, TIDAK di-cache, karena data itu
  *   harus selalu yang terbaru.
  *
- * Setiap kali struktur form berubah, naikkan CACHE_NAME (v5 -> v6, dst)
+ * Setiap kali struktur form berubah, naikkan CACHE_NAME (v6 -> v7, dst)
  * supaya cache lama dibuang saat service worker baru aktif.
  */
 
-const CACHE_NAME = 'ta-shell-v5';
+const CACHE_NAME = 'ta-shell-v6';
 const APP_SHELL = [
   './',
   './index.html',

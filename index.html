@@ -7,30 +7,30 @@
 <link rel="manifest" href="./manifest.json">
 <link rel="icon" href="./icon-192.png">
 <link rel="apple-touch-icon" href="./icon-192.png">
-<meta name="theme-color" content="#FFFFFF">
+<meta name="theme-color" content="#12161B">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#F1F2F4;
-    --card:#FFFFFF;
-    --card-2:#F6F7F8;
-    --border:#D9DCE1;
-    --text:#1B1F24;
-    --muted:#5F6873;
-    --good:#1E8449;
-    --good-bg:#E4F3EA;
-    --bad:#B42318;
-    --bad-bg:#FCE9E7;
-    --bad-strong:#B42318;
-    --accent:#D85A30;
-    --danger:#B42318;
+    --bg:#12161B;
+    --card:#1B2129;
+    --card-2:#20272F;
+    --border:#2B333D;
+    --text:#E9EDF1;
+    --muted:#8B96A1;
+    --good:#33C481;
+    --good-bg:#173026;
+    --bad:#F2A93B;
+    --bad-bg:#332612;
+    --bad-strong:#E8592D;
+    --accent:#4FA3E3;
+    --danger:#E8592D;
   }
   *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;-webkit-tap-highlight-color:transparent;color-scheme:light;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;-webkit-tap-highlight-color:transparent;color-scheme:dark;}
   /* cegah pull-to-refresh / overscroll bawaan browser saat tidak sengaja tarik ke bawah */
   html,body{overscroll-behavior-y:none;overscroll-behavior-x:none;}
-  ::selection{background:var(--accent);color:#fff;}
+  ::selection{background:var(--accent);color:#0A0D10;}
 
   h1,h2,h3,.display{font-family:'Barlow Condensed',sans-serif;font-weight:800;letter-spacing:0.01em;text-transform:uppercase;}
   .mono{font-family:'JetBrains Mono',monospace;}
@@ -481,138 +481,6 @@
     font-family:'Barlow Condensed';font-weight:800;font-size:16px;letter-spacing:.03em;text-transform:uppercase;cursor:pointer;}
   .mode-change-link{background:none;border:none;color:var(--muted);font-family:'JetBrains Mono';font-size:10px;
     letter-spacing:.05em;text-transform:uppercase;cursor:pointer;padding:0;text-decoration:underline;}
-
-  /* ================= Tampilan v2: datar, padat, terang (alat kerja lapangan) ================= */
-  html,body{font-size:15px;line-height:1.4;}
-  h1,h2,h3,.display{font-family:'Inter',sans-serif;font-weight:700;text-transform:none;letter-spacing:0;}
-  label,.settings-group-label,.d-ctl label,.confirm-row .k,.gauge-num small,.b-stat span,.d-table th,.b-draft .lbl{
-    text-transform:none;letter-spacing:0;font-family:'Inter',sans-serif;font-weight:600;font-size:12px;color:var(--muted);}
-
-  header.top{background:var(--card);padding:10px 16px 0;border-bottom:1px solid var(--border);}
-  .brand-logo{width:34px;height:34px;}
-  .brand .eyebrow{font-family:'Inter';font-size:11.5px;font-weight:600;letter-spacing:0;text-transform:none;color:var(--muted);}
-  .brand h1{font-size:17px;margin:2px 0 0;line-height:1.15;}
-  .gauge-num{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:17px;}
-  .gauge-num small{font-size:11px;margin-top:2px;}
-  .warn-count{font-family:'Inter';font-size:12px;font-weight:600;margin-top:4px;}
-  .warn-dot{box-shadow:none;border-radius:2px;}
-
-  /* tab bagian: teks + garis bawah, bukan pill */
-  nav.jump{gap:0;margin:8px -16px 0;padding:0 8px;border-top:1px solid var(--border);}
-  nav.jump button{
-    font-family:'Inter';font-size:13px;font-weight:600;letter-spacing:0;padding:10px 10px 9px;
-    border:none;border-bottom:3px solid transparent;border-radius:0;background:none;color:var(--muted);
-  }
-  nav.jump button.done{color:var(--good);border-bottom-color:transparent;}
-  nav.jump button.has-issue{color:var(--bad);}
-  nav.jump button.active{background:none;color:var(--text);border-bottom-color:var(--accent);}
-
-  .bottom-nav{background:var(--card);padding:8px 0 calc(8px + env(safe-area-inset-bottom));}
-  .bottom-nav-item{font-size:11.5px;font-weight:600;}
-  .bottom-nav-item.active{color:var(--accent);}
-
-  .meta-card{border-radius:8px;padding:14px;margin-bottom:14px;}
-  input[type=text],input[type=search],input[type=date],input[type=number],select.meta,textarea{
-    background:var(--card);border-radius:6px;padding:9px 11px;font-size:15px;}
-  input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 2px rgba(216,90,48,.18);}
-  .field-dropdown,.status-dropdown{background:var(--card);border-radius:6px;box-shadow:0 6px 18px rgba(20,24,30,.16);}
-  .field-dropdown .opt:hover{background:var(--card-2);color:var(--accent);}
-  .status-dropdown .opt:hover{background:var(--bad-bg);color:var(--bad);}
-  .status-dropdown .opt.lainnya{color:var(--accent);}
-
-  .section{margin-bottom:20px;scroll-margin-top:150px;}
-  .section-head{border-bottom:2px solid var(--text);margin-bottom:8px;padding-bottom:5px;}
-  .section-head h2{font-size:17px;}
-  .section-head .count,.subsection-head .count{font-family:'JetBrains Mono';font-size:12px;font-weight:600;color:var(--muted);}
-  .subsection{margin-bottom:12px;}
-  .subsection-head{margin:0 0 6px;}
-  .subsection-head h3{font-family:'Inter';font-size:13.5px;font-weight:700;letter-spacing:0;text-transform:none;color:var(--muted);}
-
-  /* kartu item: padat, penanda status berupa garis kiri */
-  .item{border-radius:6px;padding:10px 12px;margin-bottom:6px;border-left:3px solid var(--border);}
-  .item.is-good{border-color:var(--border);border-left-color:var(--good);}
-  .item.is-bad{border-color:var(--border);border-left-color:var(--bad);}
-  .item-name{font-size:14.5px;font-weight:600;margin-bottom:8px;}
-  .btn-row{gap:6px;}
-  .status-btn,.status-input{
-    border-radius:6px;border:1px solid var(--border);background:var(--card);color:var(--muted);
-    font-family:'Inter';font-weight:600;font-size:14px;letter-spacing:0;text-transform:none;min-height:42px;padding:9px 8px;}
-  .status-btn.good.selected{background:var(--good);border-color:var(--good);color:#fff;}
-  .status-input.selected{background:var(--bad);border-color:var(--bad);color:#fff;}
-  .status-input.selected::placeholder{color:#fff;}
-  .status-input::placeholder{color:var(--muted);}
-
-  footer.submit-bar{margin-top:16px;padding-top:16px;}
-  .submit-status{font-family:'Inter';font-size:12.5px;}
-  button.submit,.d-apply,.mode-confirm-btn,.btn-signin,.confirm-send{
-    background:var(--accent);color:#fff;border:none;border-radius:6px;
-    font-family:'Inter';font-weight:700;font-size:15.5px;letter-spacing:0;text-transform:none;}
-  button.submit{padding:14px;}
-  button.submit:disabled{background:#E3E5E9;color:#8A929C;}
-  button.submit.sending{background:var(--muted);color:#fff;}
-  .confirm-send{border:1px solid var(--accent);}
-  .confirm-actions button{border-radius:6px;font-family:'Inter';font-weight:600;font-size:15px;letter-spacing:0;text-transform:none;}
-  .confirm-edit{background:var(--card);color:var(--text);}
-  .btn-spinner{border-color:rgba(255,255,255,.4);border-top-color:#fff;}
-
-  .toast{background:var(--card);border-radius:6px;font-family:'Inter';font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(20,24,30,.16);}
-
-  .bulk-row{margin:-4px 0 14px;}
-  .bulk-btn{border-radius:6px;font-family:'Inter';font-size:13px;font-weight:600;letter-spacing:0;text-transform:none;}
-  .bulk-btn.good:active{background:var(--good-bg);}
-  .draft-note{font-family:'Inter';font-size:12px;}
-
-  /* Beranda */
-  .b-greet{font-family:'Inter';font-weight:700;font-size:24px;text-transform:none;letter-spacing:0;}
-  .b-date{font-family:'Inter';font-size:13px;letter-spacing:0;margin:4px 0 12px;}
-  .b-chip{font-family:'Inter';font-size:12px;font-weight:600;letter-spacing:0;text-transform:none;border-radius:4px;padding:4px 8px;}
-  .b-chip.accent{background:none;}
-  .b-cta{background:var(--accent);color:#fff;border-radius:8px;padding:14px 16px;}
-  .b-cta .t{font-family:'Inter';font-weight:700;font-size:18px;text-transform:none;letter-spacing:0;}
-  .b-cta .s{font-size:12.5px;opacity:.9;}
-  .b-draft{border-radius:8px;padding:12px 14px;border-left:3px solid var(--accent);}
-  .b-draft .lbl{color:var(--accent);}
-  .b-draft .eq{font-family:'JetBrains Mono';font-weight:600;font-size:18px;text-transform:none;}
-  .b-bar,.b-bar>i,.pa-bar,.pa-bar i{border-radius:2px;}
-  .b-stats{gap:6px;margin-bottom:18px;}
-  .b-stat{border-radius:6px;padding:10px 8px;text-align:left;}
-  .b-stat b{font-family:'JetBrains Mono';font-weight:600;font-size:24px;}
-  .b-stat span{margin-top:4px;font-size:12px;}
-  .b-hist{border-radius:6px;padding:10px 12px;margin-bottom:6px;}
-  .b-hist .tag{border-radius:4px;font-family:'Inter';font-size:12px;font-weight:600;padding:3px 7px;}
-  .b-empty{border-radius:6px;}
-
-  /* Dashboard & tabel */
-  #pageDashboard h2,.settings-page h2{font-size:21px;}
-  .d-filter,.pa-block{border-radius:8px;}
-  .d-quick button{border-radius:4px;font-family:'Inter';font-size:12.5px;font-weight:600;letter-spacing:0;text-transform:none;}
-  .d-quick button.active{background:var(--accent);color:#fff;border-color:var(--accent);}
-  .d-table-wrap{border-radius:6px;}
-  .d-table th{font-size:12px;}
-  .d-table td.num{font-family:'JetBrains Mono';font-weight:600;font-size:15px;}
-  .d-tabs button{font-family:'Inter';font-weight:700;font-size:14.5px;letter-spacing:0;text-transform:none;}
-  .pa-head b{font-family:'Inter';font-weight:700;font-size:15.5px;text-transform:none;}
-  .tag-low,.pm-tag{border-radius:4px;font-family:'Inter';font-weight:600;}
-  .settings-row{border-radius:6px;}
-
-  /* Konfirmasi, login, pilih mode */
-  .confirm-sheet{border-radius:12px 12px 0 0;}
-  @media (min-width:560px){.confirm-sheet{border-radius:10px;}}
-  .confirm-overlay{background:rgba(20,24,30,.5);}
-  .confirm-rows{border-radius:6px;background:var(--card-2);}
-  .confirm-issues{font-family:'Inter';font-size:13px;font-weight:600;}
-  #loginOverlay,#modeSelectOverlay{background:var(--bg);}
-  .login-brand img{box-shadow:none;}
-  .login-brand h1{font-size:26px;}
-  .login-brand .sub{font-family:'Inter';font-size:13px;letter-spacing:0;text-transform:none;}
-  .login-field input{border-radius:6px;background:var(--card);border-width:1px;}
-  .login-error,.login-hint{font-family:'Inter';}
-  .mode-card{border-radius:8px;}
-  .mode-choice{border-radius:6px;border-width:1px;font-family:'Inter';background:var(--card);}
-  .mode-choice .mc-title{font-family:'Inter';font-size:15.5px;font-weight:700;text-transform:none;letter-spacing:0;}
-  .mode-choice.selected{background:#FBEDE8;border-color:var(--accent);}
-  select.mode-select{border-radius:6px;background:var(--card);}
-  .mode-change-link{font-family:'Inter';font-size:12px;letter-spacing:0;text-transform:none;}
 </style>
 </head>
 <body>
